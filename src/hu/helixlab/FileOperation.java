@@ -17,6 +17,21 @@ public class FileOperation {
             System.err.println(e.getMessage());
         }
     }
+    //2 feladat
+    public static void fileMaker(String filePlace, int num, String fileName2) {
+        //fout változó inicializálása
+        try {
+            //file mentési helyének megadása, a file nevének megadása, valamint darabszámának létrehozása for ciklussal
+            for (int i = 1; i <= num; i++) {
+            // for ciklusssal bevezetett i változóval lehet megoldani a különböző fájlnevek létrehozását
+                FileOutputStream fout = new FileOutputStream(filePlace + i + fileName2);
+        }//kivétel általános hiba esetén, kivétel file hiánya esetén
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+    }
 
 
 
