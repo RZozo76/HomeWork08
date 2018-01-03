@@ -33,6 +33,23 @@ public class FileOperation {
         }
     }
 
+    public static void fileMakerWithContent(String filePlace, String content, String fileName3) {
+
+        //fout változó inicializálása
+        try {
+            // file mentési helyének megadása, valamint a file nevének megadása
+            FileOutputStream fout = new FileOutputStream(filePlace + fileName3);
+            //string konvertálás és beleírása a file-ba
+            byte b[] = content.getBytes();
+            fout.write(b);
+            fout.close();
+            System.out.println("success...");
+            // kivétel általános hiba esetén
+        } catch (Exception e) {
+                System.err.println(e.getMessage());
+            }
+        
 
 
+    }
 }

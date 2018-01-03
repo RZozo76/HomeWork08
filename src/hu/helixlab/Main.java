@@ -7,5 +7,8 @@ public class Main {
         FileOperation.fileMaker("E:\\","virag.txt");
     //2 feladat
         FileOperation.fileMaker("E:\\", 4, "ajandek.txt");
+        //3 feladat
+        String content = "Valami szöveg";
+        FileOperation.fileMakerWithContent("E:\\", content, "valami.txt");
     }
 }
