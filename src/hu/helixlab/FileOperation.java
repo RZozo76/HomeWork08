@@ -48,7 +48,29 @@ public class FileOperation {
         } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
-        
+
+
+    }
+    public static void fileMakerWithContent(String filePlace, int num2, String content, String fileName4) {
+
+        //fout változó inicializálása
+        FileOutputStream fout = null;
+        try {
+            // file mentési helyének megadása, valamint a file nevének megadása
+            for (int i = 1; i <= num2; i++) {
+                // for ciklusssal bevezetett i változóval lehet megoldani a különböző fájlnevek létrehozását
+                fout = new FileOutputStream(filePlace + i + fileName4);
+                byte b[] = content.getBytes();
+                fout.write(b);
+                fout.close();
+            }
+            //string konvertálás és beleírása a file-ba
+
+            System.out.println("success...");
+            // kivétel általános hiba esetén
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
 
 
     }

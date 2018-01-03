@@ -10,5 +10,7 @@ public class Main {
         //3 feladat
         String content = "Valami szöveg";
         FileOperation.fileMakerWithContent("E:\\", content, "valami.txt");
+        //4 feladat
+        FileOperation.fileMakerWithContent("E:\\", 3, content, "szoveg.txt" );
     }
 }
